@@ -1,0 +1,15 @@
+#!/bin/bash
+# Create Annual Directory structure for organizing and storing RAW photo files.
+
+if [ "$#" -eq 0 ]
+then
+  echo -n "Enter the head name (year): "
+  read year
+else
+  year="$1"
+  echo "$year"
+fi
+
+NEW_DIR="$HOME/Desktop/Photography/$year"
+
+mkdir -p $NEW_DIR/{01_January_"$year",02_February_"$year",03_March_"$year",04_April_"$year",05_May_"$year",06_June_"$year",07_July_"$year",08_August_"$year",09_September_"$year",10_October_"$year",11_November_"$year",12_December_"$year",}
